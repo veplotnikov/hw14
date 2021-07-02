@@ -11,7 +11,7 @@ provider "google" {
   # Configuration options
 
 credentials = "${file("/opt/credentials.json")}"
-project = "My Project 1859"
+project = "My-Project-1859"
 region = "europe-west2"
 }
 
