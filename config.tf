@@ -38,17 +38,13 @@ resource "google_compute_instance" "default" {
     }
   }
 
-  metadata = {
-    foo = "bar"
-  }
-
-  metadata {
+ metadata {
     ssh-keys = "test:${file("/home/test/.ssh/id_rsa.pub")}"
   }
 
-  metadata_startup_script = "${file("startup.sh")}"
+ metadata_startup_script = "${file("startup.sh")}"
 
-    provisioner "file" {
+ provisioner "file" {
   source = "/root/111"
   destination = "/tmp/111"
 
