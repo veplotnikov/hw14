@@ -11,8 +11,9 @@ provider "google" {
   # Configuration options
 
 credentials = "${file("/opt/credentials.json")}"
-project = "My-Project-1859"
+project = "My Project 1859"
 region = "europe-west2"
+zone   = "europe-west2-c"
 }
 
 resource "google_compute_instance" "default" {
