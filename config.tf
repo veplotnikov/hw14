@@ -12,7 +12,7 @@ provider "google" {
 
 credentials = "${file("/opt/credentials.json")}"
 project = "My Project 1859"
-region = "europe-west2-c"
+region = "europe-west2"
 }
 
 resource "google_compute_instance" "default" {
