@@ -45,8 +45,8 @@ resource "google_compute_instance" "default" {
  metadata_startup_script = "${file("startup.sh")}"
 
  provisioner "file" {
-  source = "/root/111"
-  destination = "/tmp/111"
+  source = "/opt/credentials.json"
+  destination = "/opt/credentials.json"
 
   connection {
     type = "ssh"
