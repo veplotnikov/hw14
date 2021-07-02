@@ -10,9 +10,9 @@ terraform {
 provider "google" {
   # Configuration options
 
-  resource "google_service_account" "default" {
-  account_id   = "114438999861948486183"
-  display_name = "786418527307-compute"
+credentials = "${file("/opt/credentials.json")}"
+project = "My Project 1895"
+region = "europe-west2-c"
 }
 
 resource "google_compute_instance" "default" {
