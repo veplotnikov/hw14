@@ -44,6 +44,10 @@ resource "google_compute_instance" "default" {
 
   metadata_startup_script = "${file("startup.sh")}"
 
+  output "ip" {
+  value = "${google_compute_instance.default.network_interface.0.access_config.0.nat_ip}"
+     }
+
   provisioner "file" {
   source = "/root/111"
   destination = "/tmp/111"
@@ -53,6 +57,7 @@ resource "google_compute_instance" "default" {
     user = "test"
     private_key = "${file("/home/test/.ssh/id_rsa")}"
     agent = "false"
+    host = "${google_compute_instance.default.network_interface.0.access_config.0.nat_ip}"
       }
   }
 
