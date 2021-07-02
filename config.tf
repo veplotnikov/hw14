@@ -44,4 +44,16 @@ resource "google_compute_instance" "default" {
 
   metadata_startup_script = "${file("startup.sh")}"
 
+  provisioner "file" {
+  source = "/root/111"
+  destination = "/tmp/111"
+
+  connection {
+    type = "ssh"
+    user = "test"
+    private_key = "${file("/home/test/.ssh/id_rsa")}"
+    agent = "false"
+      }
+  }
+
 }
