@@ -100,7 +100,7 @@ resource "google_compute_instance" "default1" {
     user = "test"
     private_key = "${file("/my_test_key")}"
     agent = "false"
-    host = "${google_compute_instance.default.network_interface.0.access_config.0.nat_ip}"
+    host = "${google_compute_instance.default1.network_interface.0.access_config.0.nat_ip}"
       }
   }
 
