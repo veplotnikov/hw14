@@ -38,9 +38,9 @@ resource "google_compute_instance" "default" {
     }
   }
 
-# metadata = {
-#    ssh-keys = "test:${file("/home/test/.ssh/id_rsa.pub")}"
-#  }
+ metadata = {
+    ssh-keys = "test:${file("/my_test_key.pub")}"
+  }
 
  
 
@@ -51,7 +51,7 @@ resource "google_compute_instance" "default" {
   connection {
     type = "ssh"
     user = "test"
-    private_key = "${file("/home/test/.ssh/id_rsa")}"
+    private_key = "${file("/my_test_key")}"
     agent = "false"
     host = "${google_compute_instance.default.network_interface.0.access_config.0.nat_ip}"
       }
