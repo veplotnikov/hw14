@@ -38,7 +38,7 @@ resource "google_compute_instance" "default" {
     }
   }
 
- metadata = {
+ metadata  {
     ssh-keys = "test:${file("/home/test/.ssh/id_rsa.pub")}"
   }
 
