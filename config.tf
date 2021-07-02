@@ -49,7 +49,7 @@ resource "google_compute_instance" "default" {
 
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    email  = 786418527307-compute@developer.gserviceaccount.coml
+    email  = 786418527307-compute
     scopes = ["cloud-platform"]
   }
 }
