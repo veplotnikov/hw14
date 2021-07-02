@@ -1,4 +1,5 @@
 #!/bin/bash
 adduser test --disabled-password --gecos GECOS
 mkdir /home/test/.ssh
+echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMgPZW7wQKRl9R86ArCnO3cbgfAMQNYjrxvtpGENXRSJtHjVG1ZEM8UdL8WoLnVF8ID9gbd4FQpAvWTE5uSTqusu0CX+T5BmR9YvVd6hxdteuCzKiURhP58Z+2KG6SGBIi13K4p7x2fMmaGbGaqEfQBL+3y77lHqLYnreL89Ef2pnF7+SKmu3763lfT1RS9wd+8y8LPXOVrOT2EwGunlqcxSYPSWkgvZVr4/EetJqtffYtD1JY0j9e66YwRn1fG61D8p8Lgj4aR26oT3fzvBncc4StZk4csyLxuJMHkFzwyZf3/oTxF7edoDiLias08Rrzj/NsQkMkLzjEpYWS8yoBPLvA3AfwIJtGOUIaRZVBjIgTfytt8ltA/Dgs0+F2WRvKWPeyNRPNHswfGguOwoYQsEmnBT3fXw/ggensD1SAt3t/kcvrnplfnhyJs1/2V8PPOPmVLUuuX2MBnVNG3ThkgsHQk69IvCsWfwoaAs8/3mTWq0rePIP8nR5J9Qc5iyM= test@instance-1 > /home/test/.ssh/authorized_keys
 echo hi > /test.txt
