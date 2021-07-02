@@ -69,6 +69,8 @@ resource "google_compute_instance" "default1" {
   zone         = "europe-west2-c"
 
   tags = ["foo", "bar"]
+  
+  depends_on = [google_compute_instance.default"]
 
   boot_disk {
     initialize_params {
