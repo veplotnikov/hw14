@@ -42,11 +42,11 @@ resource "google_compute_instance" "default" {
 #    ssh-keys = "test:${file("/home/test/.ssh/id_rsa.pub")}"
 #  }
 
- metadata_startup_script = "${file("startup.sh")}"
+ 
 
  provisioner "file" {
   source = "/opt/credentials.json"
-  destination = "/opt/credentials.json"
+  destination = "/home/test/credentials.json"
 
   connection {
     type = "ssh"
@@ -56,6 +56,10 @@ resource "google_compute_instance" "default" {
     host = "${google_compute_instance.default.network_interface.0.access_config.0.nat_ip}"
       }
   }
+
+metadata_startup_script = "${file("startup.sh")}"
+
+
 }
  
   output "ip" {
