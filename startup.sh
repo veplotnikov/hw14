@@ -8,7 +8,7 @@ sudo apt-get update && apt-get install apt-transport-https ca-certificates gnupg
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
 sudo apt-get update && sudo apt-get install google-cloud-sdk -y
 # Auth
-gcloud auth activate-service-account hw14-86@principal-rope-318517.iam.gserviceaccount.com --key-file=/opt/credentials.json --project=principal-rope-318517
+gcloud auth activate-service-account hw14-86@principal-rope-318517.iam.gserviceaccount.com --key-file=/home/test/credentials.json --project=principal-rope-318517
 # Build app
 mkdir /opt/boxfuse 
 mkdir -p /opt/tomcat/latest/webapps/
