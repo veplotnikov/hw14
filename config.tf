@@ -70,7 +70,7 @@ resource "google_compute_instance" "default1" {
 
   tags = ["foo", "bar"]
   
-  depends_on = [google_compute_instance.default"]
+  depends_on = [google_compute_instance.default]
 
   boot_disk {
     initialize_params {
